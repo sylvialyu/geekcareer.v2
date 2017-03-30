@@ -13,7 +13,7 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
-          <li class="" style="font-size: 17px;"><%= link_to("Signup", new_user_registration_path) %></li>
+          <li class="" style="font-size: 17px;"><%= link_to("Register", new_user_registration_path) %></li>
           <li class="" style="font-size: 17px;"><%= link_to("Login", new_user_session_path) %></li>
         <% else %>
           <li class="dropdown">
