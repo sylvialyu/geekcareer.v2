@@ -19,6 +19,13 @@
 @import 'bootstrap';
 @import 'font-awesome';
 
+
+.gray {
+  background-color: #f7f7f7;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 /*All Banner style*/
 .home{
     background-size: cover;
@@ -86,13 +93,13 @@
 /*Company Section style
 ==================*/
 .title {
-  margin-top: -140px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: -90px;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
   font-size:28px;
-  font-weight: 200;
-  line-height: 5rem;
-  letter-spacing: 3px;
+  font-weight: 700;
+  line-height: 6rem;
+  letter-spacing: 1.5px;
 }
 
 #features {
@@ -108,25 +115,26 @@
     background:#FFFFFF;
     text-align:center;
     padding:20px;
-    border: solid 1px #cccccc;
 }
-.feature p {
-    margin-top:20px;
-    margin-bottom:30px;
-}
+
 .feature i{
-    font-size:80px;
+    font-size:35px;
     color:#FFFFFF;
-    background:#1E825F;
-    padding:30px;
+    background:#808081;
+    padding:20px;
     border-radius:50%;
-    border: solid 3px #1E825F;
+    border: solid 3px #808081;
 }
-.feature h3 {
-    color:#1E825F;
+
+.feature h4 {
+  color: #fff;
+}
+
+.feature:hover h4 {
+    color:#808081;
 }
 .feature:hover {
-    background:#F5F5F5;
+    background:#fff;
     -webkit-transform: translate(0,1em);
     -moz-transform: translate(0,1em);
     -o-transform: translate(0,1em);
@@ -134,19 +142,52 @@
     transform: translate(0,1em);
 }
 .feature:hover i{
-    color:#1E825F;
-    border-color:#1E825F;
-    background:#FFFFFF;
+    color:#808081;
+    border-color:#808081;
+    background:#fff;
 }
-.feature:hover .title_border {
-    background-color:#1E825F;
-    width:50%;
+
+/*
+service section style
+========================*/
+
+.service_items {
+    margin: 80px 0;
 }
-.feature .title_border {
-    width: 0%;
-    height: 3px;
-    background:#1E825F;
-    margin: 0 auto;
-    margin-top: 12px;
-    margin-bottom: 8px;
+
+.service_items .hexagon i,
+.service_items .hexagon span{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #ee997b;
+    margin:0;
+    line-height: 70px;
+    font-size:2rem;
+    color:#fff;
+    border-radius: 50%;
+}
+
+.service_items .about-content {
+    width: 100%;
+    position: absolute;
+    z-index: 22;
+    line-height: 3.2rem;
+    text-align: center;
+}
+.service_items .about-content span.icon{
+    font-size:1.5rem;
+    color:#fff;
+}
+.service_right_text h4,
+.service_left_text h4{
+    font-weight: 400;
+    font-size:16px;
+}
+
+.service_right_text p,
+.service_left_text p{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:14px;
+    font-weight: 400;
 }
