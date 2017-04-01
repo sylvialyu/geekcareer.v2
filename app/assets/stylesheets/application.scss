@@ -19,7 +19,15 @@
 @import 'bootstrap';
 @import 'font-awesome';
 
-html,
+html {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+
 body {
   width: 100%;
   padding: 0;
