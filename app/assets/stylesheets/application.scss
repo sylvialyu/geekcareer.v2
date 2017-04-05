@@ -188,7 +188,7 @@ service section style
 }
 
 .img {
-  max-width: 100%;
+  min-width: 100%; min-height: 100%; vertical-align: middle;
 }
 
 .service_left_text h4,
