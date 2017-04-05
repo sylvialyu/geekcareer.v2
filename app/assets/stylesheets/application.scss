@@ -40,7 +40,7 @@ body {
 
 .bg-white {
   font-family: 'PT Sans', sans-serif;;
-  padding: 50px 50px 18px;
+  padding: 50px auto 18px;
 
 }
 
@@ -77,24 +77,24 @@ body {
     color: white;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
-    font-size:6rem;
+    font-size:4.2em;
     font-weight: 200;
     line-height: 8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .banner_text h2{
     font-family: 'Open Sans', sans-serif;
-    font-size:2.5rem;
-    font-weight: 200;
-    line-height: 5rem;
+    font-size:1.7em;
+    font-weight: 180;
+    line-height: 6rem;
     color: white;
     text-align: center;
     letter-spacing: 0.1rem;
     padding-left: 1em;
     padding-right: 1em;
-    margin-bottom: 5rem;
+    margin-bottom: 3.5em;
 }
 
 .button {
@@ -185,6 +185,10 @@ service section style
 
 .service_items {
     margin: 80px 0;
+}
+
+.img {
+  max-width: 100%;
 }
 
 .service_left_text h4,
