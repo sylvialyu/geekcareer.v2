@@ -51,6 +51,9 @@ body {
   font-family: 'PT Sans', sans-serif;;
 }
 
+.foot {
+  margin-left: 0.3em
+}
 
 /*Banner Section style
 ==================*/
@@ -76,6 +79,8 @@ body {
     font-size:6rem;
     font-weight: 200;
     line-height: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .banner_text h2{
@@ -83,7 +88,7 @@ body {
     font-size:2.5rem;
     font-weight: 200;
     line-height: 5rem;
-    margin:0px auto 50px;
+    margin:0px 1rem 5rem;
     color: white;
     text-align: center;
     letter-spacing: 0.1rem;
@@ -138,14 +143,14 @@ body {
 .feature {
     background:#FFFFFF;
     text-align:center;
-    padding:20px;
+    padding:2em;
 }
 
 .feature i{
-    font-size:35px; /*-- 要修改！！ --*/
+    font-size:3em; /*-- 要修改！！ --*/
+    padding:0.5em;
     color:#FFFFFF;
     background:#808080;
-    padding:20px;
     border-radius:50%;
     border: solid 3px #808080;
 }
@@ -186,13 +191,17 @@ service section style
 .service_left_text h4,
 .service_right_text h4 {
   font-weight: 400;
-  font-size:16px;
+  font-size:1.3em;
+  padding-left: 8px;
+  padding-right: 8px;
   margin-right: -80px;
 }
 
 .service_left_text p,
 .service_right_text p {
-  font-size:14px;
+  font-size:1em;
   font-weight: 400;
+  padding-left: 8px;
+  padding-right: 8px;
   margin-right: -80px;
 }
