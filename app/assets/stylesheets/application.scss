@@ -40,7 +40,7 @@ body {
 
 .bg-white {
   font-family: 'PT Sans', sans-serif;
-  padding: 50px auto 18px;
+  margin: 4em auto 0;
 
 }
 
@@ -49,7 +49,8 @@ body {
   margin-left: -15px;
   margin-right: -15px;
   font-family: sans-serif;
-  font-family: 'PT Sans', sans-serif;;
+  font-family: 'PT Sans', sans-serif;
+  padding-top: 2em;
 }
 
 .foot {
@@ -66,10 +67,22 @@ body {
     background-position: top center;
     height: 100%;
     overflow: hidden;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
     margin:0 -15px 20px;
   }
+
+  .banner_bottom{
+      background-image: url('https://ww1.sinaimg.cn/large/006tKfTcgy1fe52imb6toj30zk0fen03.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      background-position: center center;
+      height: 20%;
+      overflow: hidden;
+      padding-top: 70px;
+      margin-top: -15px;
+    }
 
 .banner_text h1{
     font-family: 'Open Sans', sans-serif;
@@ -208,4 +221,61 @@ service section style
   padding-left: 8px;
   padding-right: 8px;
   margin-right: -80px;
+}
+
+
+/*
+Browse Your Jobs Section
+========================*/
+.category {
+  padding: 0 1.4286em 0;
+  margin: 3.5714em auto 7em;
+  text-align: center;
+  height: auto;
+  width: auto;
+  position: relative;
+  li {
+    display: inline-block;
+    width: 15.7143em;
+    height: 10.7143em;
+    margin-left: 0.7143em;
+    margin-right: 0.7143em;
+    position: relative;
+    margin-bottom: 3.5714em;
+    overflow: hidden;
+    .category-img-wrap {
+      width: 15.7143em;
+      height: 10.7143em;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &:hover {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -webkit-transition: all .8s;
+        transition: all .5s;
+      }
+    }
+    .box-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,.7);
+      font-size: 1.142em;
+      padding: 0.45em 1.71em;
+      color: #fff;
+      transition: opacity .4s ease-in-out;
+    }
+  }
+}
+
+/*
+Browse Your Jobs Section
+========================*/
+.slogan {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 3em;
 }
