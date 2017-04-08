@@ -41,6 +41,10 @@ body {
   position: relative;
 }
 
+.navbar {
+  height: 4em
+}
+
 .wrapper {
   min-height: 100%;
   margin-bottom: -7em; /* 等于footer的高度 */
@@ -81,7 +85,7 @@ body {
     background-position: top center;
     height: 100%;
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 85px;
     padding-bottom: 100px;
     margin:0 -15px 20px;
   }
