@@ -1,4 +1,4 @@
-<br/><br/><br/>
+<div class="content">
 <div class="container">
   <div class="pull-right dropdown clearfix">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -11,17 +11,26 @@
     </ul>
   </div>
 
-  <table class="table table-boldered">
+  <table width="100%">
     <tbody>
       <% @jobs.each do |job| %>
-        <tr>
-          <td><%= link_to(job.title, job_path(job)) %></td>
-          <td><%= job.wage_lower_bound %></td>
-          <td><%= job.wage_upper_bound %></td>
-          <td><%= job.created_at %></td>
+
+        <tr class="job_title row"><td><p><%= link_to(job.title, job_path(job)) %></p></td></tr>
+
+        <tr class="job_details row">
+          <td class="col-xs-4"><p><i class="fa fa-id-card" aria-hidden="true"></i> <%= job.company_name %></p></td>
+          <td class="col-xs-4"><p><i class="fa fa-location-arrow" aria-hidden="true"></i> <%= job.location %></p></td>
+          <td class="col-xs-4"><p><i class="fa fa-calendar" aria-hidden="true"></i> <%= job.published_time %></p></td>
+        </div></tr>
+
+        <tr class="job_details row">
+          <td class="col-xs-4"><p><i class="fa fa-jpy" aria-hidden="true"></i> <%= job.wage_lower_bound %> - <%= job.wage_upper_bound %></p></td>
+          <td class="col-xs-4"><p><i class="fa fa-envelope" aria-hidden="true"></i> <%= job.contact_email %></p></td>
         </tr>
+
       <% end %>
     </tbody>
   </table>
 
+</div>
 </div>
