@@ -1,9 +1,11 @@
 <div class="content">
   <h3 class="job_section_title"> Resume submitted to <%= @job.title %> </h3>
 
-<hr>
+  <div class="back">
+    <%= link_to(content_tag(:i, "Back", class: "glyphicon glyphicon-menu-left"), url_for(:back)) %>
+  </div>
 
-<div class="job_section_description">
+<div class="job_section_resume">
 <%= simple_form_for [@job, @resume] do |f| %>
   <div class="job_section_editnew"><%= f.input :content %></div>
   <div class="job_section_editnew"><%= f.input :attachment %></div>
