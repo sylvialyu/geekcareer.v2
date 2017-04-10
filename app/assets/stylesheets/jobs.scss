@@ -5,7 +5,11 @@
 
 .content {
   margin-top: 7em;
+  margin-bottom: 5em;
   color: #636262;
+  padding-left: 5em;
+  padding-right: 5em;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .table {
@@ -14,7 +18,7 @@
 }
 
 .job_title {
-  font-size: 1.1em;
+  font-size: 1.15em;
   padding-left: 2em;
   padding-top: 1.3em;
 
@@ -30,4 +34,26 @@
   padding-left: 2em;
   padding-bottom: 1em;
   border-bottom: 1px solid lightgrey;
+}
+
+.job_section_title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.job_section_description {
+  font-size: 1.2em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.back {
+  font-size: 1.2em;
+  padding-left: 5em;
+}
+
+.btn-1 {
+  margin:1.5em auto;
+  text-align: center;
+  font-size: 1.5em;
 }
