@@ -5,8 +5,8 @@
       Filter <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-      <li><%= link_to("by Minimum Salary", jobs_path(:order => "by_lower_bound")) %></li>
-      <li><%= link_to("by Maximum Salary", jobs_path(order: "by_upper_bound")) %></li>
+      <li><%= link_to("by Minimum Wage", jobs_path(:order => "by_lower_bound")) %></li>
+      <li><%= link_to("by Maximum Wage", jobs_path(order: "by_upper_bound")) %></li>
       <li><%= link_to("by Published Time", jobs_path) %></li>
     </ul>
   </div>
@@ -15,7 +15,7 @@
     <tbody>
       <% @jobs.each do |job| %>
 
-        <div class="job_title row"><p><%= link_to(job.title, job_path(job)) %></p></div>
+        <div class="job_vacancy row"><p><%= link_to(job.title, job_path(job)) %></p></div>
 
         <div class="job_details_1 row">
           <div class="col-xs-4"><p><i class="fa fa-id-card" aria-hidden="true"></i> <%= job.company_name %></p></div>
