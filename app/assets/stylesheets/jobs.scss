@@ -8,15 +8,26 @@
   color: #636262;
 }
 
-.job_body {
-  padding: 10em auto;
+.table {
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .job_title {
   font-size: 1.1em;
+  padding-left: 2em;
+  padding-top: 1.3em;
+
 }
 
-.job_details {
+.job_details_1 {
   font-size: 1em;
+  padding-left: 2em;
+}
 
+.job_details_2 {
+  font-size: 1em;
+  padding-left: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgrey;
 }

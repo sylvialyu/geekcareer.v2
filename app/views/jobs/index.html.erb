@@ -11,22 +11,22 @@
     </ul>
   </div>
 
-  <table width="100%">
+  <div class="table">
     <tbody>
       <% @jobs.each do |job| %>
 
-        <tr class="job_title row"><td><p><%= link_to(job.title, job_path(job)) %></p></td></tr>
+        <div class="job_title row"><p><%= link_to(job.title, job_path(job)) %></p></div>
 
-        <tr class="job_details row">
-          <td class="col-xs-4"><p><i class="fa fa-id-card" aria-hidden="true"></i> <%= job.company_name %></p></td>
-          <td class="col-xs-4"><p><i class="fa fa-location-arrow" aria-hidden="true"></i> <%= job.location %></p></td>
-          <td class="col-xs-4"><p><i class="fa fa-calendar" aria-hidden="true"></i> <%= job.published_time %></p></td>
-        </div></tr>
+        <div class="job_details_1 row">
+          <div class="col-xs-4"><p><i class="fa fa-id-card" aria-hidden="true"></i> <%= job.company_name %></p></div>
+          <div class="col-xs-4"><p><i class="fa fa-location-arrow" aria-hidden="true"></i> <%= job.location %></p></div>
+          <div class="col-xs-4"><p><i class="fa fa-calendar" aria-hidden="true"></i> <%= job.published_time %></p></div>
+        </div>
 
-        <tr class="job_details row">
-          <td class="col-xs-4"><p><i class="fa fa-jpy" aria-hidden="true"></i> <%= job.wage_lower_bound %> - <%= job.wage_upper_bound %></p></td>
-          <td class="col-xs-4"><p><i class="fa fa-envelope" aria-hidden="true"></i> <%= job.contact_email %></p></td>
-        </tr>
+        <div class="job_details_2 row">
+          <div class="col-xs-4"><p><i class="fa fa-jpy" aria-hidden="true"></i> <%= job.wage_lower_bound %> - <%= job.wage_upper_bound %></p></div>
+          <div class="col-xs-4"><p><i class="fa fa-envelope" aria-hidden="true"></i> <%= job.contact_email %></p></div>
+        </div>
 
       <% end %>
     </tbody>
