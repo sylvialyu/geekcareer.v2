@@ -1,36 +1,37 @@
-<div>
-  <br>
-<% if @query_string.blank? %>
-    <div class="search-info-title">
-      The search content cannot be blank.
+<div class="content">
+<% if @jobs.blank? %>
+    <div class="search-info-title text-center">
+      Sorry! No result is matched. Please try it again.
     </div>
 
-  <% elsif @jobs.blank? %>
-    <br>
-    <h2 class="search-info-title">The search information cannot be blank.</h2>
   <% else %>
-    <h2 class="search-info-title"> Job Information About <%= @query_string %></h2>
-    <div class="search-result">
+  <div class="table">
+    <tbody>
+      <% @jobs.each do |job| %>
 
-      <div class="row jobs-show0"></div>
-      <div class="job-table">
-        <% @jobs.each do |job| %>
-        <div class="row jobs-show">
+        <div class="job_vacancy row"><p><%= link_to(job.title, job_path(job)) %></p></div>
 
-          <div class="col-md-12 col-lg-9 col-lg-offset-1">
-
-            <div class="pull-right">
-              Published Time：<%= job.created_at.to_date %>
-            </div>
-            <p ><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
-
-          </div>
+        <div class="job_details_1 row">
+          <div class="col-sm-4 col-xs-6"><p><i class="fa fa-id-card" aria-hidden="true"></i> <%= job.company_name %></p></div>
+          <div class="col-sm-4 col-xs-6"><p><i class="fa fa-location-arrow" aria-hidden="true"></i> <%= job.location %></p></div>
+          <div class="col-sm-4 col-xs-6"><p><i class="fa fa-calendar" aria-hidden="true"></i> <%= job.published_time %></p></div>
         </div>
-        <% end %>
-      </div>
-    </div>
+
+        <div class="job_details_2 row">
+          <div class="col-sm-4 col-xs-6"><p><i class="fa fa-jpy" aria-hidden="true"></i> <%= job.wage_lower_bound %> - <%= job.wage_upper_bound %></p></div>
+          <div class="col-sm-4 col-xs-6"><p><i class="fa fa-envelope" aria-hidden="true"></i> <%= job.contact_email %></p></div>
+        </div>
+
+      <% end %>
+    </tbody>
+
+  </div>
+
+
+
     <div class="text-center">
       <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>
     </div>
-  <% end %>
+    <% end %>
+
 </div>
