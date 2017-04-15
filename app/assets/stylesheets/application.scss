@@ -47,15 +47,17 @@ body {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -7em; /* 等于footer的高度 */
+  margin-bottom: -110px; /* 等于footer的高度 */
 }
 
 .push {
-  height: 7em;
+  height: 110px;
 }
 
 .footer {
-  height: 7em;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
   background-color: #222222;
   .footer_icon a {
     font-size: 1.6em;
