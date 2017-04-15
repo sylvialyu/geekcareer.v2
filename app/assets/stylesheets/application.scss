@@ -69,12 +69,17 @@ body {
 .alert {
     margin-bottom: 0;//底部 margin 不撑开距离
     margin-top: 4em;
+    border-radius: 0;
 }
 
 
 /*
 footer
 ========================*/
+footer {
+  background: #222222;
+}
+
 .footer-text {
     color: #9d9d9d;
     margin-top: 2em;
