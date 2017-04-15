@@ -90,15 +90,18 @@ footer {
   width: 100%;
   height: 110px;
   background-color: #222222;
+  .footer_icon {
+    text-align: right;
+  }
   .footer_icon a {
     font-size: 1.5em;
-    padding-top: 1.8em;
+    margin-top: 1.8em;
     color:#9d9d9d;
     text-decoration:none;
     }
     .footer_icon a:hover {
       font-size: 1.5em;
-      padding-top: 1.8em;
+      margin-top: 1.8em;
       color:#fff;
       text-decoration:none;
       }
