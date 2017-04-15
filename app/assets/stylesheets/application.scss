@@ -78,6 +78,8 @@ footer
 ========================*/
 footer {
   background: #222222;
+  @media screen and (max-width: 768px) and (min-width: 485px) {
+    max-width: 70%;
 }
 
 .footer-text {
@@ -105,7 +107,7 @@ footer {
     color:#fff;
     text-decoration:none;
     }
-    
+
   .footer_icon li {
     display:inline;
     margin-left: 0.6em;
