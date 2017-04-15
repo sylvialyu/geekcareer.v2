@@ -78,9 +78,6 @@ footer
 ========================*/
 footer {
   background: #222222;
-  @media screen and (max-width: 768px) and (min-width: 485px) {
-    max-width: 70%;
-  }
 }
 
 .footer-text {
@@ -91,7 +88,7 @@ footer {
 .footer {
   bottom: 0;
   width: 100%;
-  height: 110px;
+  height: 150px;
   background-color: #222222;
 }
 
@@ -118,11 +115,11 @@ footer {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -110px; /* 等于footer的高度 */
+  margin-bottom: -150px; /* 等于footer的高度 */
 }
 
 .push {
-  height: 110px;
+  height: 150px;
 }
 
 
