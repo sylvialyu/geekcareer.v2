@@ -30,8 +30,8 @@ puts "30 public jobs created."
 
 
 create_jobs = for i in 1..10 do
-	job_test=jobs_info[rand(0..8)]
-	company_test=company_info[rand(0..9)]
+	job_test=jobs_info[rand(0..4)]
+	company_test=company_info[rand(0..8)]
   Job.create!([title: job_test[0],description: job_test[1], wage_upper_bound: rand(100..200)*100,
 		wage_lower_bound: rand(70..99)*100, is_hidden:"true",location:company_test[1],company_name:company_test[0],contact_email:company_test[2]])
 end
