@@ -1,15 +1,5 @@
 <div class="content">
   <div class="container">
-  <div class="pull-right dropdown clearfix">
-    <button class="btn btn-default dropdown-toggle" type="button color: #636262" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Filter <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-      <li><%= link_to("by Minimum Wage", jobs_path(:order => "by_lower_bound")) %></li>
-      <li><%= link_to("by Maximum Wage", jobs_path(order: "by_upper_bound")) %></li>
-      <li><%= link_to("by Published Time", jobs_path) %></li>
-    </ul>
-  </div>
 
   <div class="table">
     <tbody>
@@ -46,9 +36,6 @@
 
   </div>
 
-  <div class="text-center" style="padding-top: 1.5em">
-    <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
-  </div>
 
 </div>
 </div>
