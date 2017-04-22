@@ -100,3 +100,31 @@
 .bg-register {
   background-color: #0000FF;
 }
+
+
+.footer_icon_1 a {
+  font-size: 33px;
+  color:#fff;
+  text-decoration:none;
+  margin-top: 62px;
+
+  }
+
+  .footer_icon_1 a:hover {
+    font-size: 33px;
+    color:#9d9d9d;
+    text-decoration:none;
+    margin-top: 62px;
+
+    &:after {
+      text-decoration: none;
+    }
+
+    }
+
+  .footer_icon_1 li {
+    display:inline;
+    margin-top: 62px;
+    font-size: 33px;
+    text-decoration: none;
+  }
