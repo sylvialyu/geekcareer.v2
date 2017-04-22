@@ -16,19 +16,8 @@
       <% @jobs.each do |job| %>
 
         <div class="job_vacancy row"> <p>
-
-          <% if current_user && current_user.is_favorite_of?(job) %>
-          <%= link_to("<sapn class='fa fa-star'></sapn>".html_safe, favorite_job_path(job, type: "unfavorite"), method: :put) %>
-
-          <% else %>
-          <%= link_to("<sapn class='fa fa-star-o'></sapn>".html_safe, favorite_job_path(job, type: "favorite"), method: :put) %>
-
-          <% end %>
-
           <%= link_to(job.title, job_path(job)) %>
           </p> </div>
-
-
 
         <div class="job_details_1 row">
           <div class="col-sm-4 col-xs-6"><p><i class="fa fa-id-card" aria-hidden="true"></i> <%= job.company_name %></p></div>
@@ -39,6 +28,13 @@
         <div class="job_details_2 row">
           <div class="col-sm-4 col-xs-6"><p><i class="fa fa-jpy" aria-hidden="true"></i> <%= job.wage_lower_bound %> - <%= job.wage_upper_bound %></p></div>
           <div class="col-sm-4 col-xs-6"><p><i class="fa fa-envelope" aria-hidden="true"></i> <%= job.contact_email %></p></div>
+          <div class="col-md-4 col-md-offset-8">
+              <% if current_user && current_user.is_favorite_of?(job) %>
+              <%= link_to("<span class='fa fa-star'></sapn> Favorite".html_safe, favorite_job_path(job, type: "unfavorite"), method: :put) %>
+              <% else %>
+              <%= link_to("<span class='fa fa-star-o'></sapn> Unfavorite".html_safe, favorite_job_path(job, type: "favorite"), method: :put) %>
+              <% end %>
+        </div>
         </div>
 
       <% end %>
