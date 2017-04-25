@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   resources :jobs do
 
     put :favorite, on: :member
-    put :job_relationships
-
+    
     resources :resumes
 
     collection do

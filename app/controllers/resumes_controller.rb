@@ -10,7 +10,7 @@ class ResumesController < ApplicationController
     if !current_user.has_applied?(@job)
       @resume = Resume.new
     else
-      flash[:warning] = "You have applied this job."
+      flash[:warning] = "You have applied for this job."
       redirect_to job_path(@job)
     end
   end
