@@ -9,6 +9,7 @@ class User < ApplicationRecord
   end
 
   has_many :resumes
+  has_many :jobs
   has_many :favorites
   has_many :favorite_jobs, through: :favorites, source: :job
 

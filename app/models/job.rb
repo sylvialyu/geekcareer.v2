@@ -22,6 +22,7 @@ class Job < ApplicationRecord
   scope :upper_wage, -> {order('wage_upper_bound DESC')}
 
   has_many :resumes
+  belongs_to :user
   has_many :favorites
   has_many :fans, through: :favorites, source: :user
 
