@@ -76,6 +76,16 @@ class JobsController < ApplicationController
     end
   end
 
+  def apply
+    @job = Job.find(params[:id])
+    @job.user = current_user
+    type = params[:type]
+    if type == "apply"
+      current_user.applied_jobs << @job
+      redirect_to :back
+    end
+  end
+
 
   protected
 

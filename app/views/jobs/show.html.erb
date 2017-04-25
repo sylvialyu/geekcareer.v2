@@ -16,8 +16,6 @@
   <% else %>
   <%= link_to("<span class='fa fa-star'></sapn> Favorite".html_safe, favorite_job_path(@job, type: "favorite"), method: :put, class: "btn btn-xs btn-warning") %>
   <% end %>
-
-
 </div>
 </div>
 
@@ -26,11 +24,25 @@
 <div class="job_section_description">
   <p><%= simple_format(@job.description) %></p>
 </div>
+
 <br/>
+
   <div class="text-center">
     <div class="btn-1">
-      
-      <%= link_to("Submit Resume", new_job_resume_path(@job), class: "btn btn-primary") %>
+      <% if !current_user %>
+        <%= link_to("Submit Resume", new_job_resume_path(@job), class: "btn btn-primary", method: :get) %>
+      <% else %>
+        <% if current_user.admin? %>
+          <%= link_to("Not Available", new_job_resume_path(@job), class: "btn btn-primary disabled", method: :get) %>
+        <% else %>
+            <% if current_user.has_applied?(@job) %>
+            <%= link_to("Has Applied", new_job_resume_path(@job), class: "btn btn-primary disabled", method: :get) %>
+            <% else %>
+            <%= link_to("Submit Resume", new_job_resume_path(@job), class: "btn btn-primary", method: :get) %>
+            <% end %>
+        <% end %>
+      <% end %>
+
     </div>
   </div>
 

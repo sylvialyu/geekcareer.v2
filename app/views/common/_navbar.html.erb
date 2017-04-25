@@ -48,6 +48,7 @@
               <li><%= link_to("<span class='fa fa-th-list'></span>  Admin Panel".html_safe, admin_jobs_path) %></li>
               <% else %>
               <li><%= link_to("<span class='fa fa-star'></span>  My Favorite Jobs".html_safe, favorites_path) %></li>
+              <li><%= link_to("<span class='fa fa-check-circle-o'></span> Applied Jobs".html_safe, job_relationships_path) %></li>
               <% end %>
               <li ><%= link_to("<span class='fa fa-sign-out'></span>  Logout".html_safe, destroy_user_session_path, method: :delete) %></li>
             </ul>

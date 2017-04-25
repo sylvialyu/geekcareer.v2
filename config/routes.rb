@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :jobs do
 
     put :favorite, on: :member
+    put :job_relationships
 
     resources :resumes
 
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   end
 
   resources :favorites
+
+  resources :job_relationships
 
   namespace :admin do
     resources :jobs do

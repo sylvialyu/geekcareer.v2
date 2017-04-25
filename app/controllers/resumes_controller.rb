@@ -4,6 +4,10 @@ class ResumesController < ApplicationController
   def new
     @job = Job.find(params[:job_id])
     @resume = Resume.new
+    if current_user.admin?
+      flash[:warning] = "Job application is not available for companies"
+      redirect_to job_path(@job)
+    end
   end
 
   def create
