@@ -20,6 +20,8 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :password, presence: true
 
+
+
   def is_favorite_of?(job)
     favorite_jobs.include?(job)
   end
