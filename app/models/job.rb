@@ -26,8 +26,10 @@ class Job < ApplicationRecord
 
   has_many :favorites
   has_many :fans, through: :favorites, source: :user
-  
-  has_many :job_relationships
-  has_many :members, through: :job_relationships, source: :user
+
+  has_many :job_relationships, dependent: :destroy
+  has_many :applicants, through: :job_relationships, source: :user
+
+
 
 end
