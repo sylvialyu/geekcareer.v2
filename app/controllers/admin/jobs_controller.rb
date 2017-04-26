@@ -4,7 +4,7 @@ class Admin::JobsController < ApplicationController
   layout "admin"
 
   def index
-    @jobs = Job.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+    @jobs = current_user.jobs.all.recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def show
@@ -17,6 +17,7 @@ class Admin::JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
+    @job.user = current_user
     if @job.save
       redirect_to admin_jobs_path
     else
@@ -54,6 +55,7 @@ class Admin::JobsController < ApplicationController
     @job.hide!
     redirect_to :back
   end
+
 
   private
 

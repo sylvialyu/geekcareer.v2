@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422083256) do
+ActiveRecord::Schema.define(version: 20170425024810) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer  "job_id"
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "job_relationships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170422083256) do
     t.string   "company_name"
     t.string   "location"
     t.string   "published_time"
+    t.integer  "user_id"
   end
 
   create_table "resumes", force: :cascade do |t|
@@ -56,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170422083256) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
+    t.boolean  "is_candidate",           default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
