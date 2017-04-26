@@ -4,7 +4,7 @@ class Admin::JobsController < ApplicationController
   layout "admin"
 
   def index
-    @jobs = Job.all.order("created_at DESC")
+    @jobs = Job.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   def show
