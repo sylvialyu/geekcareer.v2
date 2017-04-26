@@ -1,13 +1,25 @@
-<h1>Add a Job</h1>
+<div class="content">
+<h3 class="job_section_title">Add a Job</h3>
+
+<div class="job_section_description">
 
 <%= simple_form_for @job do |f| %>
 
-<%= f.input :title %>
-<%= f.input :description %>
-<%= f.input :wage_lower_bound, :label => "薪资下限" %>
-<%= f.input :wage_upper_bound, :label => "薪资上限" %>
-<%= f.input :contact_email %>
-<%= f.input :is_hidden %>
-<%= f.submit "Submit" %>
+<div class="job_section_editnew"><%= f.input :title %></div>
+<div class="job_section_editnew"><%= f.input :company_name %></div>
+<div class="job_section_editnew"><%= f.input :description %></div>
+<div class="job_section_editnew"><%= f.input :location %></div>
+<div class="job_section_editnew"><%= f.input :published_time, :label => "Published Time" %></div>
+<div class="job_section_editnew"><%= f.input :wage_lower_bound, :label => "Minimum Wage" %></div>
+<div class="job_section_editnew"><%= f.input :wage_upper_bound, :label => "Maximum Wage" %></div>
+<div class="job_section_editnew"><%= f.input :contact_email %></div>
+<div class="job_section_editnew"><%= f.input :is_hidden %></div>
+
+<div class="text-center">
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+</div>
 
 <% end %>
+
+</div>
+</div>

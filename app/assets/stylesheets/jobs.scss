@@ -1,3 +1,68 @@
 // Place all the styles related to the jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.content {
+  margin-top: 7em;
+  margin-bottom: 5em;
+  color: #636262;
+  padding-left: 5em;
+  padding-right: 5em;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.table {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.job_vacancy {
+  font-size: 1.15em;
+  padding-left: 2em;
+  padding-top: 1.3em;
+
+}
+
+.job_details_1 {
+  font-size: 1em;
+  padding-left: 2em;
+}
+
+.job_details_2 {
+  font-size: 1em;
+  padding-left: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgrey;
+}
+
+.job_section_title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.job_section_description {
+  font-size: 1.2em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.back {
+  font-size: 1.2em;
+  padding-left: 5em;
+}
+
+.btn-1 {
+  margin:1.5em auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.job_section_editnew {
+  padding: 0em 3.5em 0.8em 3.5em;
+}
+
+.job_section_resume {
+  padding: 2em 3.5em 0.8em 3.5em;
+  font-size: 1.2em;
+}
