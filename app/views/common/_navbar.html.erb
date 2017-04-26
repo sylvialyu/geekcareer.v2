@@ -9,6 +9,10 @@
     </button>
       <a class="navbar-brand" href="/" style="font-size: 1.55em;">geek career</a>
 
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar-collapse collapse">
       <div class="nav navbar-nav navbar-left">
       <%= form_tag search_jobs_path, :method => :get  do %>
       <div class="input-group" id="search-id" >
@@ -22,9 +26,7 @@
       </div>
       <% end %>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar-collapse collapse">
+    
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
           <li class="" style="font-size: 1.2em;"><a href="#" data-toggle="modal" data-target="#signup-modal"><span class="fa fa-sign-in" aria-hidden="true"></span> Register</a></li>

@@ -2,26 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
+
       <title>geek career</title>
       <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
 
         <!--Google Fonts link-->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|PT+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     </head>
 
-  <body data-spy="scroll" data-target=".navbar-collapse">
+  <body>
     <div class="wrapper">
         <div class="row">
           <%= render "common/navbar" %>
+        </div>
           <%= render "common/flashes" %>
           <%= yield %>
-        </div>
+
         <div class="push"></div>
       </div>
 
