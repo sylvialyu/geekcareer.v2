@@ -9,8 +9,14 @@ class User < ApplicationRecord
   end
 
   has_many :resumes
+  has_many :favorites
+  has_many :favorite_jobs, through: :favorites, source: :job
 
   validates :email, presence: true
   validates :password, presence: true
+
+  def is_favorite_of?(job)
+    favorite_jobs.include?(job)
+  end
 
 end

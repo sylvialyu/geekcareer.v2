@@ -10,8 +10,13 @@
       <a class="navbar-brand" href="/" style="font-size: 1.55em;">geek career</a>
 
 
-
     <!-- Collect the nav links, forms, and other content for toggling -->
+    <div >
+      <ul class="nav navbar-nav navbar-left">
+        <li class="" style="font-size: 1.2em;"><a href="/jobs">Jobs</a></li>
+      </ul>
+    </div>
+
     <div class="navbar-collapse collapse">
       <div class="nav navbar-nav navbar-left">
       <%= form_tag search_jobs_path, :method => :get  do %>
@@ -26,7 +31,7 @@
       </div>
       <% end %>
     </div>
-    
+
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
           <li class="" style="font-size: 1.2em;"><a href="#" data-toggle="modal" data-target="#signup-modal"><span class="fa fa-sign-in" aria-hidden="true"></span> Register</a></li>
@@ -41,6 +46,8 @@
             <ul class="dropdown-menu">
               <% if current_user.admin? %>
               <li><%= link_to("<span class='fa fa-th-list'></span>  Admin Panel".html_safe, admin_jobs_path) %></li>
+              <% else %>
+              <li><%= link_to("<span class='fa fa-star'></span>  My Favorite Jobs".html_safe, favorites_path) %></li>
               <% end %>
               <li ><%= link_to("<span class='fa fa-sign-out'></span>  Logout".html_safe, destroy_user_session_path, method: :delete) %></li>
             </ul>

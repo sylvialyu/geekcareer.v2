@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :favorite]
   before_action :validate_search_key, only: [:search]
 
   def index
@@ -57,6 +57,22 @@ class JobsController < ApplicationController
     if @query_string.present?
       search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
       @jobs = search_result.paginate(:page => params[:page], :per_page => 5 )
+    end
+  end
+
+  def favorite
+    @job = Job.find(params[:id])
+    type = params[:type]
+    if type == "favorite"
+      current_user.favorite_jobs << @job
+      redirect_to :back
+
+    elsif type == "unfavorite"
+      current_user.favorite_jobs.delete(@job)
+      redirect_to :back
+
+    else
+      redirect_to :back
     end
   end
 

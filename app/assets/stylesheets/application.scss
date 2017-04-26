@@ -82,26 +82,26 @@ footer {
 
 .footer-text {
     color: #9d9d9d;
-    margin-top: 2em;
+    margin-top: 70px;
 }
 
 .footer {
   bottom: 0;
   width: 100%;
-  height: 110px;
+  height: 150px;
   background-color: #222222;
 }
 
 .footer_icon a {
-  font-size: 1.5em;
-  margin-top: 1.8em;
+  font-size: 25px;
+  margin-top: 68px;
   color:#9d9d9d;
   text-decoration:none;
   }
 
   .footer_icon a:hover {
-    font-size: 1.5em;
-    margin-top: 1.8em;
+    font-size: 25px;
+    margin-top: 68px;
     color:#fff;
     text-decoration:none;
     }
@@ -115,11 +115,11 @@ footer {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -110px; /* 等于footer的高度 */
+  margin-bottom: -150px; /* 等于footer的高度 */
 }
 
 .push {
-  height: 110px;
+  height: 150px;
 }
 
 
