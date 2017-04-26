@@ -33,7 +33,7 @@
         <%= link_to("Submit Resume", new_job_resume_path(@job), class: "btn btn-primary", method: :get) %>
       <% else %>
         <% if current_user.admin? %>
-          <%= link_to("Not Available", new_job_resume_path(@job), class: "btn btn-primary disabled", method: :get) %>
+          <%= link_to("Submit Resume", new_job_resume_path(@job), class: "btn btn-primary disabled", method: :get) %>
         <% else %>
             <% if current_user.has_applied?(@job) %>
             <%= link_to("Has Applied", new_job_resume_path(@job), class: "btn btn-primary disabled", method: :get) %>
