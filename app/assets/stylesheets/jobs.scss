@@ -49,6 +49,8 @@
   font-size: 1.2em;
   padding-left: 5em;
   padding-right: 5em;
+  text-align: justify;
+  line-height: 2em;
 }
 
 .back {
@@ -87,4 +89,9 @@
       margin-bottom: 30px;
     }
   }
+}
+
+.job_desc {
+  text-align: justify;
+  line-height: 2em;
 }
