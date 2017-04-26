@@ -12,20 +12,22 @@
 
         <!--Google Fonts link-->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|PT+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
     </head>
 
   <body data-spy="scroll" data-target=".navbar-collapse">
-    <div class="container-fluid">
-      <div class="row">
-        <%= render "common/navbar" %>
-        <%= render "common/flashes" %>
-        <%= yield %>
+    <div class="wrapper">
+        <div class="row">
+          <%= render "common/navbar" %>
+          <%= render "common/flashes" %>
+          <%= yield %>
+        </div>
+        <div class="push"></div>
       </div>
+
+    <%= render "common/footer"%>
+
     </div>
 
-    <div class="row">
-    <%= render "common/footer"%>
-  </div>
-
   </body>
-</html> 
+</html>
