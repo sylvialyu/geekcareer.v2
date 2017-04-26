@@ -1,20 +1,20 @@
 <nav class="navbar  navbar-inverse  navbar-fixed-top">
   <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->
-    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       <span class="sr-only"> Toggle navigation</span>
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
     </button>
-      <a class="navbar-brand" href="/">geek career</a>
+      <a class="navbar-brand" href="/" style="font-size: 1.55em;">geek career</a>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
-          <li class=""><%= link_to("注册", new_user_registration_path) %></li>
-          <li class=""><%= link_to("登录", new_user_session_path) %></li>
+          <li class="" style="font-size: 1.2em;"><%= link_to("Register", new_user_registration_path) %></li>
+          <li class="" style="font-size: 1.2em;"><%= link_to("Login", new_user_session_path) %></li>
         <% else %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -25,7 +25,7 @@
               <% if current_user.admin? %>
               <li><%= link_to("Admin Panel", admin_jobs_path) %></li>
               <% end %>
-              <li><%= link_to("退出", destroy_user_session_path, method: :delete) %></li>
+              <li><%= link_to("Logout", destroy_user_session_path, method: :delete) %></li>
             </ul>
           </li>
           <% end %>
