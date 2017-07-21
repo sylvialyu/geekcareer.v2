@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425024810) do
+ActiveRecord::Schema.define(version: 20170721050128) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer  "job_id"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20170425024810) do
     t.string   "location"
     t.string   "published_time"
     t.integer  "user_id"
+    t.string   "friendly_id"
+    t.index ["friendly_id"], name: "index_jobs_on_friendly_id", unique: true
   end
 
   create_table "resumes", force: :cascade do |t|

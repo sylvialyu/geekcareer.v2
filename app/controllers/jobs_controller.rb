@@ -14,7 +14,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
     if @job.is_hidden
       flash[:warning] = "This Job is already archieved."
       redirect_to root_path
@@ -35,11 +35,11 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
   end
 
   def update
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
     if @job.update(job_params)
       redirect_to jobs_path, notice: "Update Success"
     else
@@ -48,7 +48,7 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
     @job.destroy
     redirect_to jobs_path, alert: "Job Deleted"
   end

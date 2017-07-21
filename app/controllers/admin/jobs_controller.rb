@@ -8,7 +8,7 @@ class Admin::JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
   end
 
   def new
@@ -26,11 +26,11 @@ class Admin::JobsController < ApplicationController
   end
 
   def edit
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
   end
 
   def update
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
     if @job.update(job_params)
       redirect_to admin_jobs_path, notice: "Update Success"
     else
@@ -39,19 +39,19 @@ class Admin::JobsController < ApplicationController
   end
 
   def destroy
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
     @job.destroy
     redirect_to admin_jobs_path, alert: "Job Deleted"
   end
 
   def publish
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
     @job.publish!
     redirect_to :back
   end
 
   def hide
-    @job = Job.find(params[:id])
+    @job = Job.find_by_friendly_id!(params[:id])
     @job.hide!
     redirect_to :back
   end
@@ -60,7 +60,7 @@ class Admin::JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :company_name, :location, :published_time)
+    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :company_name, :location, :published_time, :friendly_id)
   end
 
 end

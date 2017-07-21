@@ -1,4 +1,11 @@
 class Job < ApplicationRecord
+  before_validation :generate_friendly_id, :on => :create
+
+  validates_presence_of :friendly_id
+
+  def to_param
+    self.friendly_id
+  end
 
   validates :title, presence: true
   validates :wage_lower_bound, presence: true
@@ -29,6 +36,12 @@ class Job < ApplicationRecord
 
   has_many :job_relationships, dependent: :destroy
   has_many :applicants, through: :job_relationships, source: :user
+
+  protected
+
+  def generate_friendly_id
+    self.friendly_id ||= SecureRandom.uuid
+  end
 
 
 
